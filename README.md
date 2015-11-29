@@ -1,4 +1,7 @@
 # NodeJS Base image
+
+[![hope/nodejs](https://img.shields.io/badge/docker-hope/nodejs-brightgreen.svg)](https://hub.docker.com/r/hope/nodejs/)
+
 Base image for NodeJS containers.
 
 ## Build
