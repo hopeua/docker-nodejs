@@ -3,7 +3,7 @@ FROM hope/base
 MAINTAINER Sergey Sadovoi <sergey@hope.ua>
 
 ENV NPM_CONFIG_LOGLEVEL info
-ENV NODEJS_VERSION 5.4.0
+ENV NODEJS_VERSION 5.4.1
 
 # gpg keys listed at https://github.com/nodejs/node
 RUN gpg --keyserver pool.sks-keyservers.net --recv-keys \
