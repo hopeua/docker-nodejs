@@ -6,7 +6,7 @@ ENV NPM_CONFIG_LOGLEVEL info
 ENV NODEJS_VERSION 5.6.0
 
 # gpg keys listed at https://github.com/nodejs/node
-RUN gpg --keyserver pool.sks-keyservers.net --recv-keys \
+RUN gpg --trust-model always --keyserver pool.sks-keyservers.net --recv-keys \
 
 # pub   2048R/7E37093B 2015-02-03
 #       Key fingerprint = 9554 F04D 7259 F041 24DE  6B47 6D5A 82AC 7E37 093B
