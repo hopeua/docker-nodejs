@@ -83,7 +83,7 @@ RUN \
 
     cd node-v${NODEJS_VERSION} && \
     export GYP_DEFINES="linux_use_gold_flags=0" && \
-    ./configure --prefix=/usr --fully-static --without-npm && \
+    ./configure --prefix=/usr --fully-static && \
     NPROC=$(grep -c ^processor /proc/cpuinfo 2>/dev/null || 1) && \
     make -j${NPROC} -C out mksnapshot BUILDTYPE=Release && \
     paxctl -cm out/Release/mksnapshot && \
@@ -93,7 +93,6 @@ RUN \
 
     cd /tmp && \
     if [ -x /usr/bin/npm ]; then \
-        npm install -g npm@3 && \
         find /usr/lib/node_modules/npm -name test -o -name .bin -type d | xargs rm -rf; \
     fi && \
 
