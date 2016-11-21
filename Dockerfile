@@ -15,9 +15,11 @@ RUN \
         python \
         linux-headers \
         paxctl \
-        libgcc \
-        libstdc++ \
         gnupg && \
+    apk add --no-cache \
+        libgcc \
+        libstdc++ && \
+
     cd /tmp && \
 
     gpg --trust-model always --keyserver pool.sks-keyservers.net --recv-keys \
@@ -83,7 +85,7 @@ RUN \
 
     cd node-v${NODEJS_VERSION} && \
     export GYP_DEFINES="linux_use_gold_flags=0" && \
-    ./configure --prefix=/usr --fully-static && \
+    ./configure --prefix=/usr && \
     NPROC=$(grep -c ^processor /proc/cpuinfo 2>/dev/null || 1) && \
     make -j${NPROC} -C out mksnapshot BUILDTYPE=Release && \
     paxctl -cm out/Release/mksnapshot && \
