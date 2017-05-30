@@ -6,8 +6,9 @@ Base image for NodeJS containers. Contains **node** and **npm**.
 
 ## Versions
 
-* `latest` – latest version of NodeJS. Use this if you want always be up to date
+* `latest` – LTS version of NodeJS. Use this if you want always be up to date with stable branch
 * `6` – latest NodeJS release of 6.x branch
+* `7` – latest NodeJS release of 7.x branch
 
 ## Usage
 
