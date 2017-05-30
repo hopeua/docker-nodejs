@@ -1,6 +1,6 @@
 # NodeJS Base image
 
-[![hope/nodejs](https://img.shields.io/badge/docker-hope/nodejs-brightgreen.svg)](https://hub.docker.com/r/hope/nodejs/)
+[![Codefresh build status]( https://g.codefresh.io/api/badges/build?repoOwner=HopeUA&repoName=docker-nodejs&branch=6&pipelineName=main&accountName=HopeUA&type=cf-1)]( https://g.codefresh.io/repositories/HopeUA/docker-nodejs/builds?filter=trigger:build;branch:6;service:592d25342326de000181b2b3~main) [![Github](https://img.shields.io/github/stars/HopeUA/docker-nodejs.svg?style=social&label=Star)](https://github.com/HopeUA/docker-nodejs)
 
 Base image for NodeJS containers. Contains **node** and **npm**.
 
